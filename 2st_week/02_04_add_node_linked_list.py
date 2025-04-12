@@ -32,6 +32,15 @@ class LinkedList:
 
     def add_node(self, index, value):
         new_node = Node(value)
+
+        # 인덱스가 0일때는 과연 어떻게 될까? => 예외 처리
+        # head 새로 만들기 : head -> prev.head
+        if index == 0:
+            new_node.next = self.head
+
+            self.head = new_node
+            return
+
         #index - 1번째의 노드가 필요하다.
         #넣고 싶은 위치의 "직전 노드"가 필요한 것임
         prev_node = self.get_node(index - 1)
@@ -50,5 +59,8 @@ linked_list.print_all()
 # 1번째 인덱스 : 12
 # [5]->[12]->[8]
 linked_list.add_node(1,6) # 1번째 인덱스에 6을 넣어줌
-linked_list.print_all()
 # [5]->[6]->[12]->[8]
+
+linked_list.add_node(0,7)
+linked_list.print_all()
+# [7] -> [5]->[6]->[12]->[8]
