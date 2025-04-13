@@ -4,20 +4,20 @@ class Node:
         self.next = None
 
 
-class LinkedList:
-    def __init__(self, value):
-        self.head = Node(value)
+class LinkedList: # 클래스 선언
+    def __init__(self, value): # 생성자 함수
+        self.head = Node(value) # head에 시작하는 Node를 연결 (시작 지점 설정)
 
-    def append(self, value):
+    def append(self, value): # 현재 있는 노드의 가장 맨 뒤에 노드 추가
         cur = self.head
-        while cur.next is not None:
+        while cur.next is not None: # null이 아닐때까지 반복
             cur = cur.next
         cur.next = Node(value)
 
     def print_all(self):
         cur = self.head
-        while cur is not None:
-            print(cur.data)
+        while cur is not None: # null이 아닐때까지 반복
+            print(cur.data)  # 현재 노드 출력
             cur = cur.next
 
     def get_node(self, index):
