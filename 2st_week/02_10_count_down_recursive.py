@@ -1,5 +1,5 @@
 def count_down(number):
-    if number < 0:
+    if number < 0: # 탈출조건
         return
 
     print(number)          # number를 출력하고

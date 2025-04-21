@@ -4,7 +4,7 @@
 # factorial(n - 1) = (n - 1) * factorial(n-2)
 
 def factorial(n):
-    if n == 1:
+    if n == 1: # (1 - 1은 0이니까 ,,)
         return 1 # 탈출조건
 
     return n * factorial(n - 1)
