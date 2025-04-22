@@ -4,7 +4,7 @@ input = [4, 6, 2, 9, 1]
 
 def selection_sort(array):
     #O(N^2)
-    n = len(array)
+    n = len(array)  # 배열의 길이를 n에 저장
     for i in range(n - 1):
         min_index = i
         for j in range(n - i):
