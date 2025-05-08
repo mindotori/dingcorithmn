@@ -28,7 +28,7 @@ def get_absent_student(all_array, present_array):
 
     # 남아있는 키값(결석한 학생)만 반환
     for key in dict.keys(): #keys() = 딕셔너리의 모든 키값들을 모아서 반환해주는 메서드
-        return key
+        return key # 하나 반환하고 종료 (결석 학생이 여러명이면 불가능)
 
 
 
